@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-level variables & small helpers */
+:root {
+  --app-bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+}
+.dark {
+  --app-bg: #0b1220;
+  --card: #081026;
+  --text: #e6eef8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--app-bg);
+  color: var(--text);
+}
+
+/* subtle entrance */
+.fade-up {
+  animation: fadeUp 300ms ease both;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
